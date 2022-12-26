@@ -1,7 +1,22 @@
-## curso-platzi-react-avanzado ⚛️
+# Instapets - Instagram based PWA for pets ⚛️
 
-**¡Sígueme en Youtube para más contenido de React y Javascript!** 👉 https://www.youtube.com/midudev
+## Project description
 
-**¡Sígueme en Twitch para streams sobre desarrollo web!** 👉 https://www.twitch.tv/midudev
+This project includes the authentication functionality for users, it has protected routes where users can access or not depending of logging. A user can liked pics and then can find their favs grouped.
 
-Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)
+## Screenshoot
+
+<div align="center">
+<img src="https://i.ibb.co/p3xjp2P/localhost-8080-user-i-Phone-6-7-8.png" align="center" style="width: 50%" />
+</div>
+
+## Installation
+
+-   Clone or download the project
+-   Install with npm
+
+```bash
+  cd the-project-directory
+  npm install
+  npm run dev
+```

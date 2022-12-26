@@ -1,7 +1,7 @@
 {
     "name": "instapets",
     "version": "1.0.0",
-    "description": "**¡Sígueme en Youtube para más contenido de React y Javascript!** 👉 https://www.youtube.com/midudev",
+    "description": "Instagram based application for pets",
     "main": "index.js",
     "scripts": {
         "build": "webpack",
@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/midudev/curso-platzi-react-avanzado.git"
+        "url": "git+https://github.com/cristianorregodev/instapets.git"
     },
     "keywords": [],
     "author": "",
@@ -19,7 +19,7 @@
     "bugs": {
         "url": "https://github.com/midudev/curso-platzi-react-avanzado/issues"
     },
-    "homepage": "https://github.com/midudev/curso-platzi-react-avanzado#readme",
+    "homepage": "https://github.com/cristianorregodev/instapets#readme",
     "devDependencies": {
         "@babel/core": "^7.20.5",
         "@babel/preset-env": "^7.20.2",
