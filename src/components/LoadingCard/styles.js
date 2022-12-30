@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const Article = styled.article`
   min-height: 250px;
+  margin-top: 10px;
 `;
 export const ImgWrapper = styled.div`
   border-radius: 10px;
   display: block;
-  height: 100%;
+  height: 300px;
   overflow: hidden;
-  padding: 56.25% 0 0 0;
   position: relative;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
   background: rgba(112, 112, 112, 1);
   background: linear-gradient(
     49deg,
@@ -32,7 +33,7 @@ export const Image = styled.img`
 export const Button = styled.button`
   display: flex;
   align-items: center;
-  padding-top: 8px;
+  padding: 8px 0 0 10px;
   cursor: pointer;
 `;
 
@@ -53,6 +54,7 @@ export const Icon = styled.div`
 export const Likes = styled.p`
   width: 100px;
   height: 16px;
+
   border-radius: 10px;
   background: rgb(112, 112, 112);
   background: linear-gradient(

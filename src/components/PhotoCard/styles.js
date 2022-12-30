@@ -7,11 +7,11 @@ export const Article = styled.article`
 export const ImgWrapper = styled.div`
   border-radius: 10px;
   display: block;
-  height: 0;
+  height: 300px;
   overflow: hidden;
-  padding: 56.25% 0 0 0;
   position: relative;
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
 `;
 
 export const Image = styled.img`
