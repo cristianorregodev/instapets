@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Svg } from "./styles";
+import { Svg, Link } from "./styles";
 
 export const Logo = (props) => (
   <Link to="/">
