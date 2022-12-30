@@ -15,7 +15,7 @@ export const Form = styled.form`
   padding: 16px 10px 30px;
   box-shadow: -2px 0px 35px 2px rgba(17, 17, 26, 0.05);
   width: 90%;
-  margin: 20px auto 40px;
+  margin: 20px auto;
   border-radius: 10px;
 `;
 
@@ -36,6 +36,9 @@ export const Input = styled.input`
   padding: 3px 10px;
   font-size: 20px;
   color: gray;
+  &[disabled] {
+    opacity: 0.3;
+  }
 `;
 export const Button = styled.button`
   background-color: #f0f;
@@ -47,9 +50,20 @@ export const Button = styled.button`
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+  &[disabled] {
+    opacity: 0.3;
+  }
 `;
 
 export const Link = styled.button`
   color: blue;
   cursor: pointer;
+  margin-top: 20px;
+`;
+
+export const Error = styled.span`
+  font-size: 14px;
+  max-width: 320px;
+  color: red;
+  text-align: center;
 `;

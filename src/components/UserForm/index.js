@@ -1,8 +1,24 @@
 import React from "react";
 import { useInputValue } from "../../hooks/useInputValue";
-import { Form, Input, Button, Title, Logo, Container, Link } from "./styles";
+import {
+  Form,
+  Input,
+  Button,
+  Title,
+  Logo,
+  Container,
+  Link,
+  Error,
+} from "./styles";
 
-export const UserForm = ({ onSubmit, title, register, setRegister }) => {
+export const UserForm = ({
+  error,
+  loading,
+  onSubmit,
+  title,
+  register,
+  setRegister,
+}) => {
   const email = useInputValue("");
   const password = useInputValue("");
 
@@ -15,10 +31,16 @@ export const UserForm = ({ onSubmit, title, register, setRegister }) => {
       <Logo src="https://i.ibb.co/T1WvKB0/pet-care.png" alt="Logo" />
       <Form onSubmit={handleSubmit}>
         <Title>{title}</Title>
-        <Input type="email" placeholder="Email" {...email} />
-        <Input type="password" placeholder="*********" {...password} />
-        <Button>{title}</Button>
+        <Input disabled={loading} type="email" placeholder="Email" {...email} />
+        <Input
+          disabled={loading}
+          type="password"
+          placeholder="*********"
+          {...password}
+        />
+        <Button disabled={loading}>{title}</Button>
       </Form>
+      {error && <Error>{error}</Error>}
       {!register ? (
         <Link onClick={() => setRegister(!register)}>
           Create a new account?

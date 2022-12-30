@@ -6,7 +6,8 @@ import { useRegisterMutation } from "../container/RegisterMutarion";
 export const NotRegisteredUser = () => {
   const [register, setRegister] = useState(false);
   const { activateAuth } = useContext(Context);
-  const { registerMutation } = useRegisterMutation();
+  const { registerMutation, mutationLoading, mutationError } =
+    useRegisterMutation();
 
   const onSubmit = ({ email, password }) => {
     const input = { email, password };
@@ -14,10 +15,16 @@ export const NotRegisteredUser = () => {
     registerMutation({ variables }).then(activateAuth);
   };
 
+  const errorMsg =
+    mutationError &&
+    "Can not register, the user already exist or an internal error has ocurred.";
+
   return (
     <>
       {!register ? (
         <UserForm
+          error={errorMsg}
+          loading={mutationLoading}
           onSubmit={onSubmit}
           title="Login"
           register={register}
@@ -25,6 +32,8 @@ export const NotRegisteredUser = () => {
         />
       ) : (
         <UserForm
+          error={errorMsg}
+          loading={mutationLoading}
           onSubmit={onSubmit}
           title="Register"
           register={register}
