@@ -26,3 +26,7 @@ export const Image = styled.img`
   width: 100%;
   position: absolute;
 `;
+
+export const Title = styled.h1`
+  text-align: center;
+`;
