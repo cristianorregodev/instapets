@@ -25,15 +25,25 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+const errorLink = onError(({ graphQLErrors, networkError }) => {
+  if (graphQLErrors)
+    graphQLErrors.forEach(
+      ({ message, locations, path }) =>
+        console.log(
+          `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+        ),
+      window.sessionStorage.removeItem("token"),
+      (window.location.href = "/user")
+    );
+  if (networkError)
+    console.log(`[Network error]: ${networkError}`),
+      window.sessionStorage.removeItem("token"),
+      (window.location.href = "/user");
+});
+
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link: errorLink.concat(authLink.concat(httpLink)),
   cache: new InMemoryCache(),
-  onError: onError(({ networkError }) => {
-    if (networkError && networkError.result.code === "invalid_token") {
-      window.sessionStorage.removeItem("token");
-      window.location.href = "/";
-    }
-  }),
 });
 const container = document.getElementById("app");
 const root = createRoot(container);
