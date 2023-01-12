@@ -48,9 +48,9 @@ const client = new ApolloClient({
 const container = document.getElementById("app");
 const root = createRoot(container);
 root.render(
-  <Provider>
-    <ApolloProvider client={client}>
+  <ApolloProvider client={client}>
+    <Provider>
       <App />
-    </ApolloProvider>
-  </Provider>
+    </Provider>
+  </ApolloProvider>
 );

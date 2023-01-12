@@ -1,3 +1,10 @@
 import React from "react";
 
-export const User = () => <h1>User</h1>;
+import { UserProfile } from "../components/UserProfile";
+export const User = () => {
+  return (
+    <>
+      <UserProfile />
+    </>
+  );
+};
