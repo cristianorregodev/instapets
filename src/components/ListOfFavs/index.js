@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, Grid, Image, Title } from "./styles";
+import { Link, Grid, Image } from "./styles";
 
 export const ListOfFavs = ({ favs = [] }) => {
   return (
     <>
-      <Title>Tus favoritos</Title>
       <Grid>
         {favs.map((fav) => (
           <Link key={fav.id} to={`/detail/${fav.id}`}>

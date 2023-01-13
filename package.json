@@ -4,10 +4,11 @@
     "description": "Instagram based application for pets",
     "main": "index.js",
     "scripts": {
-        "build": "webpack",
+        "build": "webpack ./src/index.js --mode development",
         "lint": "standard",
         "dev": "webpack serve --mode development --history-api-fallback",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "serve:dev": "webpack serve --mode 'development' && npx serve dist -s"
     },
     "repository": {
         "type": "git",
@@ -36,6 +37,7 @@
         "graphql": "^16.6.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-helmet": "^6.1.0",
         "react-icons": "^4.7.1",
         "react-router-dom": "^6.6.1",
         "styled-components": "^5.3.6"
